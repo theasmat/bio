@@ -127,6 +127,7 @@ i.customi:active {
   display: flex;
   border-top: 2px solid blue;
   border-bottom: none;
+  color: yellow;
 }
 .mac-window .content .right .bottom {
   display: flex;
@@ -140,7 +141,7 @@ i.customi:active {
 }
 .mac-window .content .right .bottom .line-no-div {
   width: 20px;
-  padding: 0 6px;
+  padding: 0 26px 0  6px;
 }
 .mac-window .content .right .bottom .main-conteint {
 }
