@@ -2,24 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asmat</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asmat - Web & App Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="/css/macwindow.css" />
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
-        <h1>Asmat</h1>
-        <p class="bio"></p>
+    <div class="loading-screen">
+        <div class="mac-window">
+            <div class="header">
+                <div class="buttons">
+                    <div class="close"></div>
+                    <div class="minimize"></div>
+                    <div class="zoom"></div>
+                </div>
+                <div class="title">Bio</div>
+                <div class="aditional"></div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="top">
+                        <i class="bi bi-files"></i>
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-git"></i>
+                        <i id="debug" class="customi" style="
+                  mask: url('/public/icons/debug-alt-small.svg') no-repeat
+                    center;
+                ">
+                        </i>
+                        <i class="customi" style="
+                  mask: url('/public/icons/widget-alt-light.svg') no-repeat
+                    center;
+                ">
+                        </i>
+                        <i class="bi bi-filetype-json"></i>
+                    </div>
+                    <div class="bottom">
+                        <i class="bi bi-person-circle"></i>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <div class="files active">
+                            <i class="bi bi-filetype-sh"></i>Bio.sh <i class="bi bi-x-lg"></i>
+                        </div>
+                        <div class="files">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="line-no-div">1</div>
+                        <div class=" main-conteint">
+                            <div class="code-typing">echo "Opening Profile..."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="left">
+                    <i><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-git-branch">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M7 8l0 8" />
+                            <path d="M9 18h6a2 2 0 0 0 2 -2v-5" />
+                            <path d="M14 14l3 -3l3 3" />
+                        </svg>Master</i>
 
-        <!-- Links Section -->
-        <a href="https://github.com/yourusername" target="_blank" class="link">GitHub</a>
-        <a href="https://twitter.com/yourusername" target="_blank" class="link">Twitter</a>
-        <a href="https://yourportfolio.com" target="_blank" class="link">Portfolio</a>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-rocket-takeoff"></i>
+                    <i class="bi bi-bootstrap-fill"></i>
+                    <div class="error-stat-icons">
+                        <i class="bi bi-x-circle"></i> 0
+                        <i class="bi bi-exclamation-triangle"></i> 0
+                        <i class="bi bi-info-circle"></i> 1
+                    </div>
+                </div>
+                <div class="middile">
+                    <i class="bi bi-clock-history"></i> 3hrs 22mins Coding
+                </div>
+                <div class="right">5.3.2</div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- main window  -->
+
+    <div class="background-animation">
+        <div style="top: 10%; left: 20%;">
+            <i class="bi bi-code"></i>
+        </div>
+        <div style=" top: 10%; left: 80%;">
+            <i class="bi bi-gear-fill"></i>
+        </div>
+        <div style=" top: 90%; left: 20%;">
+            <i class="bi bi-clipboard-data"></i>
+        </div>
+        <div style=" top: 90%; left: 80%;">
+            <i class="bi bi-lightbulb"></i>
+        </div>
+
+
+    </div>
+
+    <div class="container" style="display: none">
+        <img class="profile-pic" src="/public/images/my-notion-face.png" alt="Profile Picture" />
+        <h2 style="text-transform: uppercase;text-decoration: double;text-shadow: 4px 10px 4px #00ff7f;">Asmat</h2>
+        <p>
+            Creative Web-App Developer | CSE Student | Passionate Problem Solver
+        </p>
+
+        <div class="buttons">
+            <div class="btn" data-url="https://facebook.com">
+                <i class="bi bi-facebook"></i>
+                Facebook
+            </div>
+            <div class="btn" data-url="https://instagram.com">
+                <i class="bi bi-instagram"></i>
+                Instagram
+            </div>
+            <div class="btn" data-url="https://linkedin.com">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </div>
+            <div class="btn" data-url="https://github.com">
+                <i class="bi bi-github"></i>
+                GitHub
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                &copy; 2025 Asmat. Crafted with
+                <i class="bi bi-heart-pulse-fill"></i>.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to open a URL in a new window
+        function openLink(url) {
+            if (url) {
+                window.open(url, "_blank");
+            }
+        }
+
+        // Attach event listeners to all buttons with the class 'btn'
+        document.querySelectorAll(".btn").forEach((button) => {
+            button.addEventListener("click", () => {
+                const url = button.getAttribute("data-url");
+                openLink(url);
+            });
+        });
+
+
+        // Simulate loading screen animation
+        setTimeout(() => {
+            document.querySelector(".loading-screen").style.display = "none";
+            document.querySelector(".container").style.display = "block";
+        }, 2000);
+
+        setTimeout(() => {
+            const debugIcon = document.getElementById("debug");
+
+            // Get the position of the debug icon
+            const rect = debugIcon.getBoundingClientRect();
+            const cursor = document.createElement("i");
+            cursor.classList.add("fake-cursor", "bi", "bi-hand-index-fill");
+            document.body.appendChild(cursor);
+
+            // Position the fake cursor at the starting position (slightly offset from the top-left of the screen)
+            cursor.style.position = "absolute";
+            cursor.style.left = `20px`;
+            cursor.style.top = `20px`;
+
+            // Move the cursor to the debug icon position
+            setTimeout(() => {
+                cursor.style.left = `${rect.left + rect.width / 2}px`; // Center it horizontally on the icon
+                cursor.style.top = `${rect.top + rect.height / 2}px`; // Center it vertically on the icon
+
+                // Simulate a click animation
+                setTimeout(() => {
+                    debugIcon.classList.add("click-animation");
+
+                    // Remove the cursor after the animation
+                    setTimeout(() => {
+                        document.body.removeChild(cursor);
+                        debugIcon.classList.remove("click-animation");
+                    }, 300);
+                }, 400);
+            }, 200);
+        }, 1100);
+    </script>
 </body>
 
 </html>
