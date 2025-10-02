@@ -1,3 +1,4 @@
+/* Mac Window Styles */
 :root {
   --icon-color: #27c93f;
   --maincontent-bg: #2c2f33;
@@ -5,6 +6,7 @@
   --mac-window-text: #f3f4f6;
   --mac-window-border: #3d4147;
 }
+
 .mac-window {
   margin: 2px;
   background-color: var(--mac-window-bg);
@@ -19,6 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .mac-window .header {
   background-color: var(--mac-window-bg);
   border-bottom: 2px solid var(--mac-window-border);
@@ -29,12 +32,14 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .mac-window .header .buttons {
   gap: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .mac-window .header .buttons .close,
 .mac-window .header .buttons .minimize,
 .mac-window .header .buttons .zoom {
@@ -42,132 +47,155 @@
   width: calc(1vw + 5px);
   height: calc(1vw + 5px);
 }
+
 .mac-window .header .buttons .close {
   margin-left: 4px;
   background-color: #ff5f56;
 }
+
 .mac-window .header .buttons .minimize {
   background-color: #ffbd2e;
 }
+
 .mac-window .header .buttons .zoom {
   background-color: #27c93f;
 }
+
 .mac-window .header .title {
-  font-size: 1.2em;
-  font-weight: bold;
+  color: var(--mac-window-text);
+  font-size: calc(1vw + 5px);
+  font-weight: 500;
 }
+
+.mac-window .header .additional {
+  width: calc(1vw + 5px);
+}
+
 .mac-window .content {
+  background-color: var(--maincontent-bg);
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
+
 .mac-window .content .left {
-  width: 7%;
-  height: 100%;
-  border-right: 1px solid var(--mac-window-border);
+  background-color: var(--mac-window-bg);
+  width: calc(2vw + 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: calc(1vw + 2px) 0;
 }
-.mac-window .content .left i.bi,
-.mac-window .content .left i.customi {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  color: var(--icon-color);
-}
-i.customi {
-  background-color: var(--icon-color);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-i.customi:active {
-  transform: scale(0.95);
-}
-.mac-window .content .left .top {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-  padding: 5px;
-}
+
+.mac-window .content .left .top,
 .mac-window .content .left .bottom {
-  height: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: calc(1vw + 2px);
+  align-items: center;
+}
+
+.mac-window .content .left i {
+  color: var(--mac-window-text);
+  font-size: calc(1vw + 5px);
+}
+
+.mac-window .content .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mac-window .content .right .top {
+  background-color: var(--mac-window-bg);
+  height: calc(2vw + 10px);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(1vw + 5px);
+}
+
+.mac-window .content .right .top .files {
+  display: flex;
   align-items: center;
   gap: 5px;
-  padding: 5px;
+  color: var(--mac-window-text);
+  font-size: calc(0.5vw + 8px);
+  padding: 5px 10px;
+  border-radius: 3px;
 }
-.mac-window .content .right {
-  width: 93%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.mac-window .content .right .top {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-}
-.mac-window .content .right .top .files {
-  border: 1px solid var(--mac-window-border);
-  padding: 0 5px;
-  width: 100%;
-  border-top: none;
-  border-left: none;
-}
+
 .mac-window .content .right .top .files.active {
   background-color: var(--maincontent-bg);
-  width: fit-content;
-  display: flex;
-  border-top: 2px solid blue;
-  border-bottom: none;
-  color: yellow;
 }
+
 .mac-window .content .right .bottom {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  padding-top: 10px;
-  width: 100%;
-  height: 100%;
   background-color: var(--maincontent-bg);
-  border-right: 10px solid var(--mac-window-bg);
-  font-size: 20px;
+  color: var(--mac-window-text);
 }
+
 .mac-window .content .right .bottom .line-no-div {
-  width: 20px;
-  padding: 0 26px 0  6px;
+  background-color: var(--mac-window-bg);
+  width: calc(2vw + 10px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: calc(1vw + 5px);
+  font-size: calc(0.5vw + 8px);
 }
-.mac-window .content .right .bottom .main-conteint {
+
+.mac-window .content .right .bottom .main-content {
+  flex: 1;
+  padding: calc(1vw + 5px);
+  font-size: calc(0.5vw + 8px);
+  font-family: monospace;
 }
+
 .mac-window .footer {
   background-color: var(--mac-window-bg);
-  border-top: 1px solid var(--mac-window-border);
+  border-top: 2px solid var(--mac-window-border);
   border-radius: 0 0 5px 5px;
   height: calc(2vw + 10px);
-  padding: 0 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  font-size: small;
+  justify-content: space-between;
+  padding: 0 calc(1vw + 5px);
+  color: var(--mac-window-text);
+  font-size: calc(0.5vw + 6px);
 }
+
 .mac-window .footer .left {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
+  gap: calc(0.5vw + 5px);
 }
-.mac-window .footer .left i {
+
+.mac-window .footer .error-stat-icons {
   display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.error-stat-icons {
+
+.customi {
+  width: calc(1vw + 5px);
+  height: calc(1vw + 5px);
+  background-color: var(--mac-window-text);
+}
+
+.debug-icon {
+  mask: url('/icons/debug-alt-small.svg') no-repeat center;
+  -webkit-mask: url('/icons/debug-alt-small.svg') no-repeat center;
+}
+
+.widget-icon {
+  mask: url('/icons/widget-alt-light.svg') no-repeat center;
+  -webkit-mask: url('/icons/widget-alt-light.svg') no-repeat center;
+}
+
+.git-branch-icon {
   display: flex;
-  gap: 2px;
+  align-items: center;
+  gap: 3px;
 }

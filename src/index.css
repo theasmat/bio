@@ -18,6 +18,15 @@ body {
   overflow: hidden;
 }
 
+.app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loading-screen {
   position: absolute;
   top: 0;
@@ -38,23 +47,19 @@ body {
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #00ff7f;
-  width: 0;
-  animation: typing 1s steps(40, end) forwards, blink 0.5s step-end infinite;
+  width: 27ch;
+  color: #00ff7f;
+  font-family: monospace;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 27ch;
-  }
+.cursor {
+  animation: blink 0.5s step-end infinite;
+  color: #00ff7f;
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent;
+    opacity: 0;
   }
 }
 
@@ -113,7 +118,7 @@ body {
   height: 80px;
 }
 
-.container {
+.bio-container {
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
@@ -127,33 +132,54 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
-.profile-pic {
-  border-radius: 50%;
+.profile-container {
   width: 150px;
-  transition: transform 0.4s ease;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
   border: 3px solid #fff;
-  margin-bottom: 1rem;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.profile-pic:hover {
-  transform: scale(1.2) rotate(5deg);
+.profile-container:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: #40F3F7;
 }
 
-h2 {
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-container:hover .profile-pic {
+  transform: scale(1.05);
+}
+
+.name-title {
   font-size: 2rem;
   margin: 0;
   color: #ffd700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: 4px 10px 4px #00ff7f;
 }
 
-p {
+.bio-description {
   margin: 0.5rem 0 1.5rem;
   color: #ddd;
 }
@@ -203,28 +229,4 @@ footer {
 
 footer i {
   color: red;
-}
-
-.fake-cursor {
-  position: absolute;
-  font-size: 1.5rem;
-  color: #fff;
-  z-index: 9999;
-  transition: transform 0.4s ease;
-}
-
-.click-animation {
-  animation: clickEffect 0.3s ease-in-out;
-}
-
-@keyframes clickEffect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
