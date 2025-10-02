@@ -4,9 +4,7 @@ node_modules/
 .pnp.js
 
 # Production builds
-dist/
-dist-ssr/
-build/
+
 
 # Environment variables
 .env
